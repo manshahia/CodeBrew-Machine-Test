@@ -13,9 +13,15 @@ class TableCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewData
     
     var collectionCellToLoadForRow = 0
     
-    var properties: [RecommendedProperties?] = []
+    var recommendedPropertiesArray: [RecommendedModel?] = []
     {
         didSet{
+            collectionView.reloadData()
+        }
+    }
+    var topDevelopersArray: [TopDevelopersModel?] = []
+    {
+        didSet {
             collectionView.reloadData()
         }
     }
@@ -32,19 +38,22 @@ class TableCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewData
         
     }
     
-    
+ 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-       
-
-        if properties.count > 0
-        {
-            return properties.count
-        }
-        else
-        {
-            return 2
+        switch collectionCellToLoadForRow {
+        case 0:
+            print("Items in Section 0 : \(recommendedPropertiesArray.count)")
+            return recommendedPropertiesArray.count
+        case 1:
+            print("Items in Section 1 : \(topDevelopersArray.count)")
+            return topDevelopersArray.count
+        default:
+            return 0
         }
     }
+    
+    
+
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
@@ -54,7 +63,7 @@ class TableCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewData
         
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "recommendedcollectioncell", for: indexPath) as? RecommendedCollectionCell
             {
-                if let property = self.properties[indexPath.row]
+                if let property = self.recommendedPropertiesArray[indexPath.row]
                 {
                     cell.configureCell(data: property)
                     return cell
@@ -64,9 +73,9 @@ class TableCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewData
         case 1:
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "topdeveloperscollectioncell", for: indexPath) as? TopDevelopersCollectionCell
             {
-                if let property = self.properties[indexPath.row]
+                if let topDeveloper = self.topDevelopersArray[indexPath.row]
                 {
-                    cell.configureCell(data: property)
+                    cell.configureCell(data: topDeveloper)
                     return cell
                 }
             }

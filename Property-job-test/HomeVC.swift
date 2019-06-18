@@ -46,7 +46,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     //Table Datasource Delegate
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if dataModel.recommendedProperties.count > 0
+        if dataModel.recommendedModelArr.count > 0
         {
             return 1
         }
@@ -59,13 +59,33 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = table.dequeueReusableCell(withIdentifier: "tablecell", for: indexPath) as? TableCell
         {
-            if dataModel.recommendedProperties.count > 0
-            {
-                cell.properties = dataModel.recommendedProperties
-                print("The section being sent is \(indexPath.section)")
-                cell.collectionCellToLoadForRow = indexPath.section
+            
+            switch indexPath.section {
+            case 0:
+                if dataModel.recommendedModelArr.count > 0
+                {
+                    cell.recommendedPropertiesArray = dataModel.recommendedModelArr
+                    print("The section being sent is \(indexPath.section)")
+                    cell.collectionCellToLoadForRow = indexPath.section
+
+                }
+                return cell
+
+            case 1:
+                if dataModel.topDevelopersArr.count > 0
+                {
+                    cell.topDevelopersArray = dataModel.topDevelopersArr
+                    print("Cell \(cell.topDevelopersArray)")
+                    print("The section being sent is \(indexPath.section)")
+                    cell.collectionCellToLoadForRow = indexPath.section
+                }
+                return cell
+
+            default:
+                return UITableViewCell()
             }
-            return cell
+            
+            
         }
         else
         {
@@ -73,6 +93,20 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
         
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath.section {
+        case 0:
+            return 300
+        case 1:
+            return 250
+        default:
+            return 170
+        }
+    }
+  
+    
+    
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 100
@@ -98,8 +132,9 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         switch section {
         case 0:
             return "Recommended"
+        case 1: return "Top Developers"
         default:
-            return "Set the value please"
+            return "Pre-Sales"
         }
     }
 }

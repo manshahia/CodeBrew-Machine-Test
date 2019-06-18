@@ -44,18 +44,33 @@ class DataService {
                 //Extract Different dictionaries
                 guard let jsonDict = jsonResponse as? [String:Any] else { return }
                 guard let dataDict = jsonDict["data"] as? [String:Any] else { return }
+                
                 guard let recommendedArray = dataDict["recommended"] as? [[String:Any]] else { return }
+                guard let topDevelopersArray = dataDict["top_developers"] as? [[String:Any]] else { return }
+                guard let preSalesArray = dataDict["pre_sale"] as? [[String:Any]] else { return }
+                guard let popularProjectsArray = dataDict["popular_projects"] as? [[String:Any]] else { return }
+                guard let featuredLocalitiesArray = dataDict["featured_localities"] as? [[String:Any]] else { return }
+                guard let ourBlogsAndArticlesArray = dataDict["blogs"] as? [[String:Any]] else { return }
                 
                 //Create Data model object and properties
                 var dataModel = DataModel()
                 
-
                 //Populate data model from dictionaries
+                //Recommended Model
                 for dic in recommendedArray
                 {
-                    let property = RecommendedProperties(dic)
-                    dataModel.recommendedProperties.append(property)
+                    let property = RecommendedModel(dic)
+                    dataModel.recommendedModelArr.append(property)
                 }
+                //Top Developers model
+                print("Top has \(topDevelopersArray)")
+                for dic in topDevelopersArray
+                {
+                    let topDeveloperModel = TopDevelopersModel(dic)
+                    dataModel.topDevelopersArr.append(topDeveloperModel)
+                }
+                
+                
                 
                 completion(true,dataModel)
                 

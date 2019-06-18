@@ -16,6 +16,16 @@ class TopDevelopersCollectionCell: UICollectionViewCell {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var noOfProperties: UILabel!
     
+    func configureCell(data: TopDevelopersModel)
+    {
+        
+        
+                imageView.kf.setImage(with: URL(string: data.imageURL ))
+                yearEstablished.text = String(data.yearEstablished)
+                name.text = data.name
+                noOfProperties.text = String(data.noOfProperties)
+    }
+    
     override func awakeFromNib() {
         contentView.layer.cornerRadius = 6.0
         contentView.layer.borderWidth = 1.0
@@ -30,18 +40,6 @@ class TopDevelopersCollectionCell: UICollectionViewCell {
         layer.shadowPath = UIBezierPath(roundedRect:bounds, cornerRadius:contentView.layer.cornerRadius).cgPath
     }
     
-    func configureCell(data: RecommendedProperties)
-    {
-        //        city.text = data.city
-        //
-        //        imageView.kf.setImage(with: URL(string: data.imageURL ))
-        //
-        //        location.text = data.location
-        //
-        //        propertyDescription.text = data.description
-        //
-        //
-        //        price.text = String("$ \(data.price)")
-    }
+   
 
 }

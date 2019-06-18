@@ -9,5 +9,7 @@
 import Foundation
 
 struct DataModel {
-    var recommendedProperties = [RecommendedProperties]()
+    var recommendedModelArr = [RecommendedModel]()
+    var topDevelopersArr = [TopDevelopersModel]()
+    
 }

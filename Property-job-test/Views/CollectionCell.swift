@@ -31,7 +31,7 @@ class CollectionCell: UICollectionViewCell {
         layer.shadowPath = UIBezierPath(roundedRect:bounds, cornerRadius:contentView.layer.cornerRadius).cgPath
     }
     
-    func configureCell(data: RecommendedProperties)
+    func configureCell(data: RecommendedModel)
     {
         city.text = data.city
         
