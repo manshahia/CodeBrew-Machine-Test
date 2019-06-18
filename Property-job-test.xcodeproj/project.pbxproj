@@ -9,23 +9,33 @@
 /* Begin PBXBuildFile section */
 		2E4B3EEB1E179352CA68F9A7 /* libPods-Property-job-test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6306246A1124D14C3E630894 /* libPods-Property-job-test.a */; };
 		320CEE6022B7D9D4005342F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320CEE5F22B7D9D4005342F8 /* AppDelegate.swift */; };
-		320CEE6222B7D9D4005342F8 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320CEE6122B7D9D4005342F8 /* FirstViewController.swift */; };
+		320CEE6222B7D9D4005342F8 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320CEE6122B7D9D4005342F8 /* HomeVC.swift */; };
 		320CEE6422B7D9D4005342F8 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320CEE6322B7D9D4005342F8 /* SecondViewController.swift */; };
 		320CEE6722B7D9D4005342F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 320CEE6522B7D9D4005342F8 /* Main.storyboard */; };
 		320CEE6922B7D9D8005342F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 320CEE6822B7D9D8005342F8 /* Assets.xcassets */; };
 		320CEE6C22B7D9D8005342F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 320CEE6A22B7D9D8005342F8 /* LaunchScreen.storyboard */; };
+		320CEE7822B7E1DC005342F8 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320CEE7722B7E1DC005342F8 /* TableCell.swift */; };
+		320CEE7A22B7E38C005342F8 /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320CEE7922B7E38C005342F8 /* CollectionCell.swift */; };
+		320CEE7C22B7E9C6005342F8 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320CEE7B22B7E9C6005342F8 /* DataService.swift */; };
+		320CEE7E22B7E9EB005342F8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320CEE7D22B7E9EB005342F8 /* Constants.swift */; };
+		320CEE8022B815F3005342F8 /* RecommendedProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320CEE7F22B815F3005342F8 /* RecommendedProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1A276198C95ED364E11DE6D0 /* Pods-Property-job-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Property-job-test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Property-job-test/Pods-Property-job-test.debug.xcconfig"; sourceTree = "<group>"; };
 		320CEE5C22B7D9D4005342F8 /* Property-job-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Property-job-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		320CEE5F22B7D9D4005342F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		320CEE6122B7D9D4005342F8 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		320CEE6122B7D9D4005342F8 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		320CEE6322B7D9D4005342F8 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		320CEE6622B7D9D4005342F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		320CEE6822B7D9D8005342F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		320CEE6B22B7D9D8005342F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		320CEE6D22B7D9D9005342F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		320CEE7722B7E1DC005342F8 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
+		320CEE7922B7E38C005342F8 /* CollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
+		320CEE7B22B7E9C6005342F8 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		320CEE7D22B7E9EB005342F8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		320CEE7F22B815F3005342F8 /* RecommendedProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedProperties.swift; sourceTree = "<group>"; };
 		6306246A1124D14C3E630894 /* libPods-Property-job-test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Property-job-test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEB85CECEF5037261E1C6D07 /* Pods-Property-job-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Property-job-test.release.xcconfig"; path = "Pods/Target Support Files/Pods-Property-job-test/Pods-Property-job-test.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,12 +87,13 @@
 				320CEE7422B7DABF005342F8 /* Model */,
 				320CEE7322B7DAB8005342F8 /* Controller */,
 				320CEE5F22B7D9D4005342F8 /* AppDelegate.swift */,
-				320CEE6122B7D9D4005342F8 /* FirstViewController.swift */,
+				320CEE6122B7D9D4005342F8 /* HomeVC.swift */,
 				320CEE6322B7D9D4005342F8 /* SecondViewController.swift */,
 				320CEE6522B7D9D4005342F8 /* Main.storyboard */,
 				320CEE6822B7D9D8005342F8 /* Assets.xcassets */,
 				320CEE6A22B7D9D8005342F8 /* LaunchScreen.storyboard */,
 				320CEE6D22B7D9D9005342F8 /* Info.plist */,
+				320CEE7D22B7E9EB005342F8 /* Constants.swift */,
 			);
 			path = "Property-job-test";
 			sourceTree = "<group>";
@@ -97,6 +108,7 @@
 		320CEE7422B7DABF005342F8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				320CEE7F22B815F3005342F8 /* RecommendedProperties.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -104,6 +116,8 @@
 		320CEE7522B7DAC4005342F8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				320CEE7722B7E1DC005342F8 /* TableCell.swift */,
+				320CEE7922B7E38C005342F8 /* CollectionCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -111,6 +125,7 @@
 		320CEE7622B7DAC9005342F8 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				320CEE7B22B7E9C6005342F8 /* DataService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -218,7 +233,12 @@
 			files = (
 				320CEE6422B7D9D4005342F8 /* SecondViewController.swift in Sources */,
 				320CEE6022B7D9D4005342F8 /* AppDelegate.swift in Sources */,
-				320CEE6222B7D9D4005342F8 /* FirstViewController.swift in Sources */,
+				320CEE7822B7E1DC005342F8 /* TableCell.swift in Sources */,
+				320CEE7C22B7E9C6005342F8 /* DataService.swift in Sources */,
+				320CEE7E22B7E9EB005342F8 /* Constants.swift in Sources */,
+				320CEE6222B7D9D4005342F8 /* HomeVC.swift in Sources */,
+				320CEE8022B815F3005342F8 /* RecommendedProperties.swift in Sources */,
+				320CEE7A22B7E38C005342F8 /* CollectionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
