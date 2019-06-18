@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TableCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource
+class TableCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
     
     var collectionCellToLoadForRow = 0
@@ -25,6 +25,8 @@ class TableCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewData
             collectionView.reloadData()
         }
     }
+    var preSalesArray: [PreSalesModel?] = []
+    var popularProjectsArray: [PopularProjectsModel?] = []
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func awakeFromNib() {
@@ -36,9 +38,15 @@ class TableCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewData
         
         collectionView.register(UINib.init(nibName: "TopDevelopersCollectionCell", bundle: nil), forCellWithReuseIdentifier: "topdeveloperscollectioncell")
         
+        collectionView.register(UINib.init(nibName: "PreSalesCollectionCell", bundle: nil), forCellWithReuseIdentifier: "presalescollectioncell")
+        
+          collectionView.register(UINib.init(nibName: "PopularCollectionCell", bundle: nil), forCellWithReuseIdentifier: "popularprojectscell")
+        
+        
+        
+        
     }
-    
- 
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionCellToLoadForRow {
         case 0:
@@ -47,6 +55,9 @@ class TableCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewData
         case 1:
             print("Items in Section 1 : \(topDevelopersArray.count)")
             return topDevelopersArray.count
+        case 2:
+            return preSalesArray.count
+        case 3: return popularProjectsArray.count
         default:
             return 0
         }
@@ -79,6 +90,25 @@ class TableCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewData
                     return cell
                 }
             }
+        case 2:
+            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "presalescollectioncell", for: indexPath) as? PreSalesCollectionCell
+            {
+                if let preSales = self.preSalesArray[indexPath.row]
+                {
+                    cell.configureCell(data: preSales)
+                    return cell
+                }
+            }
+        case 3:
+            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "popularprojectscell", for: indexPath) as? PopularCollectionCell
+            {
+                if let popular = self.popularProjectsArray[indexPath.row]
+                {
+                    cell.configureCell(data: popular)
+                    return cell
+                }
+            }
+            
             
         
         default:
@@ -88,6 +118,55 @@ class TableCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewData
         return UICollectionViewCell()
     }
     
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        switch collectionCellToLoadForRow
+        {
+        case 0:
+            return CGSize(width: collectionView.frame.size.width/1.5, height:300)
+        case 1:
+            return CGSize(width: collectionView.frame.size.width / 2 - 20, height:200)
+        case 2:
+            return CGSize(width: collectionView.frame.size.width - 40, height:150)
+        case 3:
+            return CGSize(width: collectionView.frame.size.width - 40, height:100)
+        default:
+            return CGSize(width: collectionView.frame.size.width / 2 - 20, height:200)
+            
+        }
+        
+    }
   
 
 }
+
+//extension TableCell {
+//
+//
+//    func setCollectionViewDataSourceDelegate<D: UICollectionViewDataSource & UICollectionViewDelegate>(_ dataSourceDelegate: D, forRow row: Int) {
+//        collectionView.delegate = dataSourceDelegate
+//        collectionView.dataSource = dataSourceDelegate
+//        collectionView.setContentOffset(collectionView.contentOffset, animated:false) // Stops collection view if it was scrolling.
+//        collectionView.reloadData()
+//
+//    }
+//
+//    var collectionViewOffset: CGFloat {
+//        set { collectionView.contentOffset.x = newValue }
+//        get { return collectionView.contentOffset.x }
+//    }
+//
+//}
+//
+//extension TableCell:UICollectionViewDelegateFlowLayout{
+//
+//
+//    func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
+//        return true
+//    }
+//
+//
+//
+//}

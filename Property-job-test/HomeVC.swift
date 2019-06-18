@@ -20,6 +20,11 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     {
         super.viewDidLoad()
         
+        
+        table.rowHeight = UITableView.automaticDimension
+        self.table.estimatedRowHeight = 200
+        table.reloadData()
+        
         let label = UILabel()
         label.textColor = UIColor.white
         label.font = UIFont.boldSystemFont(ofSize: 30.0)
@@ -41,7 +46,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 4
     }
     
     //Table Datasource Delegate
@@ -80,6 +85,22 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                     cell.collectionCellToLoadForRow = indexPath.section
                 }
                 return cell
+            case 2:
+                if dataModel.preSalesArr.count > 0
+                {
+                    cell.preSalesArray = dataModel.preSalesArr
+                    print("Cell \(cell.topDevelopersArray)")
+                    print("The section being sent is \(indexPath.section)")
+                    cell.collectionCellToLoadForRow = indexPath.section
+                }
+                return cell
+            case 3:
+                if dataModel.popularArr.count > 0
+                {
+                    cell.popularProjectsArray = dataModel.popularArr
+                    cell.collectionCellToLoadForRow = indexPath.section
+                }
+                return cell
 
             default:
                 return UITableViewCell()
@@ -100,6 +121,10 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             return 300
         case 1:
             return 250
+        case 2:
+            return 150
+        case 3:
+            return 100
         default:
             return 170
         }
@@ -133,11 +158,17 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         case 0:
             return "Recommended"
         case 1: return "Top Developers"
+        case 2: return "Pre-Sales"
+        case 3: return "Popular Projects"
         default:
             return "Pre-Sales"
         }
     }
 }
+
+
+
+
 
 
 

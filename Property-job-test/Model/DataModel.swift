@@ -11,5 +11,6 @@ import Foundation
 struct DataModel {
     var recommendedModelArr = [RecommendedModel]()
     var topDevelopersArr = [TopDevelopersModel]()
-    
+    var preSalesArr = [PreSalesModel]()
+    var popularArr = [PopularProjectsModel]()
 }

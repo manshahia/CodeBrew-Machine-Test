@@ -69,8 +69,19 @@ class DataService {
                     let topDeveloperModel = TopDevelopersModel(dic)
                     dataModel.topDevelopersArr.append(topDeveloperModel)
                 }
+                //Pre Saled Model
+                for dic in preSalesArray
+                {
+                    let preSaleModel = PreSalesModel(dic)
+                    dataModel.preSalesArr.append(preSaleModel)
+                }
                 
-                
+                //Popular Porjects
+                for dic in popularProjectsArray
+                {
+                    let popularModel = PopularProjectsModel(dic)
+                    dataModel.popularArr.append(popularModel)
+                }
                 
                 completion(true,dataModel)
                 

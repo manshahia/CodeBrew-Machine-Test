@@ -25,6 +25,12 @@
 		3277CE4A22B944270090A595 /* TopDevelopersCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3277CE4822B944270090A595 /* TopDevelopersCollectionCell.swift */; };
 		3277CE4B22B944270090A595 /* TopDevelopersCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3277CE4922B944270090A595 /* TopDevelopersCollectionCell.xib */; };
 		3277CE4D22B94F720090A595 /* TopDevelopersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3277CE4C22B94F720090A595 /* TopDevelopersModel.swift */; };
+		3277CE5022B975F70090A595 /* PreSalesCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3277CE4E22B975F60090A595 /* PreSalesCollectionCell.swift */; };
+		3277CE5122B975F70090A595 /* PreSalesCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3277CE4F22B975F70090A595 /* PreSalesCollectionCell.xib */; };
+		3277CE5322B978020090A595 /* PreSalesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3277CE5222B978020090A595 /* PreSalesModel.swift */; };
+		3277CE5622B9842C0090A595 /* PopularCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3277CE5422B9842C0090A595 /* PopularCollectionCell.swift */; };
+		3277CE5722B9842C0090A595 /* PopularCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3277CE5522B9842C0090A595 /* PopularCollectionCell.xib */; };
+		3277CE5922B985FA0090A595 /* PopularProjectsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3277CE5822B985FA0090A595 /* PopularProjectsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +54,12 @@
 		3277CE4822B944270090A595 /* TopDevelopersCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopDevelopersCollectionCell.swift; sourceTree = "<group>"; };
 		3277CE4922B944270090A595 /* TopDevelopersCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopDevelopersCollectionCell.xib; sourceTree = "<group>"; };
 		3277CE4C22B94F720090A595 /* TopDevelopersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopDevelopersModel.swift; sourceTree = "<group>"; };
+		3277CE4E22B975F60090A595 /* PreSalesCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreSalesCollectionCell.swift; sourceTree = "<group>"; };
+		3277CE4F22B975F70090A595 /* PreSalesCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreSalesCollectionCell.xib; sourceTree = "<group>"; };
+		3277CE5222B978020090A595 /* PreSalesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreSalesModel.swift; sourceTree = "<group>"; };
+		3277CE5422B9842C0090A595 /* PopularCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCollectionCell.swift; sourceTree = "<group>"; };
+		3277CE5522B9842C0090A595 /* PopularCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularCollectionCell.xib; sourceTree = "<group>"; };
+		3277CE5822B985FA0090A595 /* PopularProjectsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularProjectsModel.swift; sourceTree = "<group>"; };
 		6306246A1124D14C3E630894 /* libPods-Property-job-test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Property-job-test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEB85CECEF5037261E1C6D07 /* Pods-Property-job-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Property-job-test.release.xcconfig"; path = "Pods/Target Support Files/Pods-Property-job-test/Pods-Property-job-test.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,6 +135,8 @@
 				320CEE7F22B815F3005342F8 /* RecommendedModel.swift */,
 				3277CE3E22B8E5DE0090A595 /* DataModel.swift */,
 				3277CE4C22B94F720090A595 /* TopDevelopersModel.swift */,
+				3277CE5222B978020090A595 /* PreSalesModel.swift */,
+				3277CE5822B985FA0090A595 /* PopularProjectsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -136,6 +150,10 @@
 				3277CE4522B93FC90090A595 /* RecommendedCollectionCell.xib */,
 				3277CE4822B944270090A595 /* TopDevelopersCollectionCell.swift */,
 				3277CE4922B944270090A595 /* TopDevelopersCollectionCell.xib */,
+				3277CE4E22B975F60090A595 /* PreSalesCollectionCell.swift */,
+				3277CE4F22B975F70090A595 /* PreSalesCollectionCell.xib */,
+				3277CE5422B9842C0090A595 /* PopularCollectionCell.swift */,
+				3277CE5522B9842C0090A595 /* PopularCollectionCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -215,7 +233,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3277CE5122B975F70090A595 /* PreSalesCollectionCell.xib in Resources */,
 				320CEE6C22B7D9D8005342F8 /* LaunchScreen.storyboard in Resources */,
+				3277CE5722B9842C0090A595 /* PopularCollectionCell.xib in Resources */,
 				3277CE4722B93FC90090A595 /* RecommendedCollectionCell.xib in Resources */,
 				320CEE6922B7D9D8005342F8 /* Assets.xcassets in Resources */,
 				320CEE6722B7D9D4005342F8 /* Main.storyboard in Resources */,
@@ -254,14 +274,18 @@
 				320CEE6422B7D9D4005342F8 /* SecondViewController.swift in Sources */,
 				3277CE4A22B944270090A595 /* TopDevelopersCollectionCell.swift in Sources */,
 				320CEE6022B7D9D4005342F8 /* AppDelegate.swift in Sources */,
+				3277CE5922B985FA0090A595 /* PopularProjectsModel.swift in Sources */,
 				320CEE7822B7E1DC005342F8 /* TableCell.swift in Sources */,
 				3277CE4D22B94F720090A595 /* TopDevelopersModel.swift in Sources */,
+				3277CE5622B9842C0090A595 /* PopularCollectionCell.swift in Sources */,
 				3277CE4622B93FC90090A595 /* RecommendedCollectionCell.swift in Sources */,
 				320CEE7C22B7E9C6005342F8 /* DataService.swift in Sources */,
 				320CEE7E22B7E9EB005342F8 /* Constants.swift in Sources */,
 				320CEE6222B7D9D4005342F8 /* HomeVC.swift in Sources */,
+				3277CE5022B975F70090A595 /* PreSalesCollectionCell.swift in Sources */,
 				320CEE8022B815F3005342F8 /* RecommendedModel.swift in Sources */,
 				320CEE7A22B7E38C005342F8 /* CollectionCell.swift in Sources */,
+				3277CE5322B978020090A595 /* PreSalesModel.swift in Sources */,
 				3277CE3F22B8E5DE0090A595 /* DataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
