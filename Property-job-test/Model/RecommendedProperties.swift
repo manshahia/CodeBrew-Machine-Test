@@ -8,7 +8,7 @@
 
 import Foundation
 
-class RecommendedProperties
+struct RecommendedProperties
 {
     var imageURL : String
     var location : String

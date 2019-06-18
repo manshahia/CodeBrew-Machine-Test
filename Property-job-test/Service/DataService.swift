@@ -41,12 +41,23 @@ class DataService {
             do {
                 let jsonResponse = try JSONSerialization.jsonObject(with: data!, options: [])
                 
+                //Extract Different dictionaries
                 guard let jsonDict = jsonResponse as? [String:Any] else { return }
                 guard let dataDict = jsonDict["data"] as? [String:Any] else { return }
                 guard let recommendedArray = dataDict["recommended"] as? [[String:Any]] else { return }
-
                 
-                completion(true,recommendedArray)
+                //Create Data model object and properties
+                var dataModel = DataModel()
+                
+
+                //Populate data model from dictionaries
+                for dic in recommendedArray
+                {
+                    let property = RecommendedProperties(dic)
+                    dataModel.recommendedProperties.append(property)
+                }
+                
+                completion(true,dataModel)
                 
                 }
              catch {

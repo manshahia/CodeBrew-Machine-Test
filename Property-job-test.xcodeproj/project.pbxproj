@@ -19,6 +19,7 @@
 		320CEE7C22B7E9C6005342F8 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320CEE7B22B7E9C6005342F8 /* DataService.swift */; };
 		320CEE7E22B7E9EB005342F8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320CEE7D22B7E9EB005342F8 /* Constants.swift */; };
 		320CEE8022B815F3005342F8 /* RecommendedProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320CEE7F22B815F3005342F8 /* RecommendedProperties.swift */; };
+		3277CE3F22B8E5DE0090A595 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3277CE3E22B8E5DE0090A595 /* DataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		320CEE7B22B7E9C6005342F8 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		320CEE7D22B7E9EB005342F8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		320CEE7F22B815F3005342F8 /* RecommendedProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedProperties.swift; sourceTree = "<group>"; };
+		3277CE3E22B8E5DE0090A595 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		6306246A1124D14C3E630894 /* libPods-Property-job-test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Property-job-test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEB85CECEF5037261E1C6D07 /* Pods-Property-job-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Property-job-test.release.xcconfig"; path = "Pods/Target Support Files/Pods-Property-job-test/Pods-Property-job-test.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				320CEE7F22B815F3005342F8 /* RecommendedProperties.swift */,
+				3277CE3E22B8E5DE0090A595 /* DataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				320CEE6222B7D9D4005342F8 /* HomeVC.swift in Sources */,
 				320CEE8022B815F3005342F8 /* RecommendedProperties.swift in Sources */,
 				320CEE7A22B7E38C005342F8 /* CollectionCell.swift in Sources */,
+				3277CE3F22B8E5DE0090A595 /* DataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

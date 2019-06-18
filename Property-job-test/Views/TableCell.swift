@@ -17,6 +17,15 @@ class TableCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewData
             collectionView.reloadData()
         }
     }
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        // Initialization code
+    }
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
        
@@ -34,28 +43,9 @@ class TableCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectioncell", for: indexPath) as? CollectionCell
         {
-            if properties.count > 0
+            if let property = properties[indexPath.row], properties.count > 0
             {
-                cell.city.text = properties[indexPath.row]?.city
-                
-                cell.imageView.kf.setImage(with: URL(string: properties[indexPath.row]?.imageURL ?? ""))
-
-                cell.location.text = properties[indexPath.row]?.location
-                cell.propertyDescription.text = properties[indexPath.row]?.description
-                
-                if let price = properties[indexPath.row]?.price
-                {
-                    cell.price.text = String(price)
-                }
-//
-//                cell.comapny.text = properties[indexPath.row]?.
-//
-//                var imageURL : String
-//                var location : String
-//                var name : String
-//                var description : String
-//                var city : String
-//                var price : Int
+                cell.configureCell(data: property)
             }
             return cell
         }
@@ -66,19 +56,6 @@ class TableCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewData
         
     }
     
-    @IBOutlet weak var collectionView: UICollectionView!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+  
 
 }
