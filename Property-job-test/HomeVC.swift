@@ -40,6 +40,10 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
     //Table Datasource Delegate
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if dataModel.recommendedProperties.count > 0
@@ -58,6 +62,8 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             if dataModel.recommendedProperties.count > 0
             {
                 cell.properties = dataModel.recommendedProperties
+                print("The section being sent is \(indexPath.section)")
+                cell.collectionCellToLoadForRow = indexPath.section
             }
             return cell
         }

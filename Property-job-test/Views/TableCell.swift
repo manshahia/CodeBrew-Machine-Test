@@ -11,6 +11,8 @@ import UIKit
 class TableCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource
 {
     
+    var collectionCellToLoadForRow = 0
+    
     var properties: [RecommendedProperties?] = []
     {
         didSet{
@@ -23,7 +25,11 @@ class TableCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewData
         super.awakeFromNib()
         collectionView.delegate = self
         collectionView.dataSource = self
-        // Initialization code
+        
+        collectionView.register(UINib.init(nibName: "RecommendedCollectionCell", bundle: nil), forCellWithReuseIdentifier: "recommendedcollectioncell")
+        
+        collectionView.register(UINib.init(nibName: "TopDevelopersCollectionCell", bundle: nil), forCellWithReuseIdentifier: "topdeveloperscollectioncell")
+        
     }
     
     
@@ -41,19 +47,36 @@ class TableCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectioncell", for: indexPath) as? CollectionCell
-        {
-            if let property = properties[indexPath.row], properties.count > 0
+        
+        
+        switch collectionCellToLoadForRow {
+        case 0:
+        
+            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "recommendedcollectioncell", for: indexPath) as? RecommendedCollectionCell
             {
-                cell.configureCell(data: property)
+                if let property = self.properties[indexPath.row]
+                {
+                    cell.configureCell(data: property)
+                    return cell
+                }
             }
-            return cell
-        }
-        else
-        {
+            
+        case 1:
+            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "topdeveloperscollectioncell", for: indexPath) as? TopDevelopersCollectionCell
+            {
+                if let property = self.properties[indexPath.row]
+                {
+                    cell.configureCell(data: property)
+                    return cell
+                }
+            }
+            
+        
+        default:
             return UICollectionViewCell()
         }
         
+        return UICollectionViewCell()
     }
     
   
