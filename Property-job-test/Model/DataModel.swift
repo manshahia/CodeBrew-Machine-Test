@@ -13,4 +13,5 @@ struct DataModel {
     var topDevelopersArr = [TopDevelopersModel]()
     var preSalesArr = [PreSalesModel]()
     var popularArr = [PopularProjectsModel]()
+    var featuredArr = [FeaturedProjectsModel]()
 }

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="featuredcollectioncell" id="gTV-IL-0wX" customClass="FeaturedCollectionCell" customModule="Property_job_test" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="294" height="68"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="294" height="68"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Projects" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfb-Ap-pxh">
+                        <rect key="frame" x="15" y="37" width="104" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Guduraja Locality" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPu-cJ-Jqe">
+                        <rect key="frame" x="8" y="15" width="120.5" height="17"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="$3K / sqft." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s93-QY-I4B">
+                        <rect key="frame" x="212.5" y="15" width="73.5" height="17"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="62" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCE-r7-enb">
+                        <rect key="frame" x="258.5" y="37" width="20.5" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="s93-QY-I4B" secondAttribute="trailing" constant="8" id="2aG-aJ-SzW"/>
+                <constraint firstItem="dCE-r7-enb" firstAttribute="top" secondItem="s93-QY-I4B" secondAttribute="bottom" constant="5" id="3qa-EI-C1U"/>
+                <constraint firstItem="xfb-Ap-pxh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="DzV-fg-gPF"/>
+                <constraint firstItem="LPu-cJ-Jqe" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="GUs-yB-8dD"/>
+                <constraint firstItem="s93-QY-I4B" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="NQ0-MU-rKB"/>
+                <constraint firstItem="xfb-Ap-pxh" firstAttribute="top" secondItem="LPu-cJ-Jqe" secondAttribute="bottom" constant="5" id="QEA-Ah-HgS"/>
+                <constraint firstAttribute="trailing" secondItem="dCE-r7-enb" secondAttribute="trailing" constant="15" id="ds3-kG-V1b"/>
+                <constraint firstItem="LPu-cJ-Jqe" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="vgt-8z-aXb"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="294" height="68"/>
+            <connections>
+                <outlet property="locality" destination="LPu-cJ-Jqe" id="Y4E-Uf-fZO"/>
+                <outlet property="rate" destination="s93-QY-I4B" id="nOC-Wz-QBA"/>
+                <outlet property="totalProjects" destination="dCE-r7-enb" id="oHT-OB-vMs"/>
+            </connections>
+            <point key="canvasLocation" x="-6.4000000000000004" y="73.763118440779621"/>
+        </collectionViewCell>
+    </objects>
+</document>

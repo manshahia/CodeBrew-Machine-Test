@@ -83,6 +83,13 @@ class DataService {
                     dataModel.popularArr.append(popularModel)
                 }
                 
+                //Featured projectys
+                for dic in featuredLocalitiesArray
+                {
+                    let featuredModel = FeaturedProjectsModel(dic)
+                    dataModel.featuredArr.append(featuredModel)
+                }
+                
                 completion(true,dataModel)
                 
                 }

@@ -31,6 +31,9 @@
 		3277CE5622B9842C0090A595 /* PopularCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3277CE5422B9842C0090A595 /* PopularCollectionCell.swift */; };
 		3277CE5722B9842C0090A595 /* PopularCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3277CE5522B9842C0090A595 /* PopularCollectionCell.xib */; };
 		3277CE5922B985FA0090A595 /* PopularProjectsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3277CE5822B985FA0090A595 /* PopularProjectsModel.swift */; };
+		3277CE5C22B98A7F0090A595 /* FeaturedCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3277CE5A22B98A7E0090A595 /* FeaturedCollectionCell.swift */; };
+		3277CE5D22B98A7F0090A595 /* FeaturedCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3277CE5B22B98A7E0090A595 /* FeaturedCollectionCell.xib */; };
+		3277CE5F22B98E540090A595 /* FeaturedProjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3277CE5E22B98E540090A595 /* FeaturedProjectModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +63,9 @@
 		3277CE5422B9842C0090A595 /* PopularCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCollectionCell.swift; sourceTree = "<group>"; };
 		3277CE5522B9842C0090A595 /* PopularCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularCollectionCell.xib; sourceTree = "<group>"; };
 		3277CE5822B985FA0090A595 /* PopularProjectsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularProjectsModel.swift; sourceTree = "<group>"; };
+		3277CE5A22B98A7E0090A595 /* FeaturedCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCollectionCell.swift; sourceTree = "<group>"; };
+		3277CE5B22B98A7E0090A595 /* FeaturedCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedCollectionCell.xib; sourceTree = "<group>"; };
+		3277CE5E22B98E540090A595 /* FeaturedProjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedProjectModel.swift; sourceTree = "<group>"; };
 		6306246A1124D14C3E630894 /* libPods-Property-job-test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Property-job-test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEB85CECEF5037261E1C6D07 /* Pods-Property-job-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Property-job-test.release.xcconfig"; path = "Pods/Target Support Files/Pods-Property-job-test/Pods-Property-job-test.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,6 +143,7 @@
 				3277CE4C22B94F720090A595 /* TopDevelopersModel.swift */,
 				3277CE5222B978020090A595 /* PreSalesModel.swift */,
 				3277CE5822B985FA0090A595 /* PopularProjectsModel.swift */,
+				3277CE5E22B98E540090A595 /* FeaturedProjectModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -154,6 +161,8 @@
 				3277CE4F22B975F70090A595 /* PreSalesCollectionCell.xib */,
 				3277CE5422B9842C0090A595 /* PopularCollectionCell.swift */,
 				3277CE5522B9842C0090A595 /* PopularCollectionCell.xib */,
+				3277CE5A22B98A7E0090A595 /* FeaturedCollectionCell.swift */,
+				3277CE5B22B98A7E0090A595 /* FeaturedCollectionCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -240,6 +249,7 @@
 				320CEE6922B7D9D8005342F8 /* Assets.xcassets in Resources */,
 				320CEE6722B7D9D4005342F8 /* Main.storyboard in Resources */,
 				3277CE4B22B944270090A595 /* TopDevelopersCollectionCell.xib in Resources */,
+				3277CE5D22B98A7F0090A595 /* FeaturedCollectionCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,11 +284,13 @@
 				320CEE6422B7D9D4005342F8 /* SecondViewController.swift in Sources */,
 				3277CE4A22B944270090A595 /* TopDevelopersCollectionCell.swift in Sources */,
 				320CEE6022B7D9D4005342F8 /* AppDelegate.swift in Sources */,
+				3277CE5F22B98E540090A595 /* FeaturedProjectModel.swift in Sources */,
 				3277CE5922B985FA0090A595 /* PopularProjectsModel.swift in Sources */,
 				320CEE7822B7E1DC005342F8 /* TableCell.swift in Sources */,
 				3277CE4D22B94F720090A595 /* TopDevelopersModel.swift in Sources */,
 				3277CE5622B9842C0090A595 /* PopularCollectionCell.swift in Sources */,
 				3277CE4622B93FC90090A595 /* RecommendedCollectionCell.swift in Sources */,
+				3277CE5C22B98A7F0090A595 /* FeaturedCollectionCell.swift in Sources */,
 				320CEE7C22B7E9C6005342F8 /* DataService.swift in Sources */,
 				320CEE7E22B7E9EB005342F8 /* Constants.swift in Sources */,
 				320CEE6222B7D9D4005342F8 /* HomeVC.swift in Sources */,

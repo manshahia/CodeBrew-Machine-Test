@@ -46,7 +46,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 4
+        return 5
     }
     
     //Table Datasource Delegate
@@ -101,6 +101,13 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                     cell.collectionCellToLoadForRow = indexPath.section
                 }
                 return cell
+            case 4:
+                if dataModel.featuredArr.count > 0
+                {
+                    cell.featuredProjectsArray = dataModel.featuredArr
+                    cell.collectionCellToLoadForRow = indexPath.section
+                }
+                return cell
 
             default:
                 return UITableViewCell()
@@ -125,6 +132,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             return 150
         case 3:
             return 100
+        case 4: return 70
         default:
             return 170
         }
@@ -160,6 +168,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         case 1: return "Top Developers"
         case 2: return "Pre-Sales"
         case 3: return "Popular Projects"
+        case 4: return "Featured Projects"
         default:
             return "Pre-Sales"
         }

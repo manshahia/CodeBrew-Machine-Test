@@ -27,6 +27,8 @@ class TableCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewData
     }
     var preSalesArray: [PreSalesModel?] = []
     var popularProjectsArray: [PopularProjectsModel?] = []
+    var featuredProjectsArray: [FeaturedProjectsModel?] = []
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func awakeFromNib() {
@@ -43,7 +45,7 @@ class TableCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewData
           collectionView.register(UINib.init(nibName: "PopularCollectionCell", bundle: nil), forCellWithReuseIdentifier: "popularprojectscell")
         
         
-        
+        collectionView.register(UINib.init(nibName: "FeaturedCollectionCell", bundle: nil), forCellWithReuseIdentifier: "featuredcollectioncell")
         
     }
 
@@ -58,6 +60,7 @@ class TableCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewData
         case 2:
             return preSalesArray.count
         case 3: return popularProjectsArray.count
+        case 4: return featuredProjectsArray.count
         default:
             return 0
         }
@@ -108,6 +111,15 @@ class TableCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewData
                     return cell
                 }
             }
+        case 4:
+            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "featuredcollectioncell", for: indexPath) as? FeaturedCollectionCell
+            {
+                if let featured = self.featuredProjectsArray[indexPath.row]
+                {
+                    cell.configureCell(data: featured)
+                    return cell
+                }
+            }
             
             
         
@@ -132,6 +144,8 @@ class TableCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewData
             return CGSize(width: collectionView.frame.size.width - 40, height:150)
         case 3:
             return CGSize(width: collectionView.frame.size.width - 40, height:100)
+        case 4:
+            return CGSize(width: collectionView.frame.size.width - 40, height:70)
         default:
             return CGSize(width: collectionView.frame.size.width / 2 - 20, height:200)
             
